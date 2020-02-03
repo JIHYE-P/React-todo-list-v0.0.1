@@ -1,13 +1,11 @@
-import React from 'react';
-import './Form.css';
+import React from 'react'
 
-const Form = ({value, onChange, onCreate, onKeyPress}) => {
-   return <>
-    <div className='form'>
-      <input value={value} onChange={onChange} onKeyPress={onKeyPress} />
-      <div className='create-button' onClick={onCreate}>추가</div>
-    </div>
-   </>
+const Form = ({onChange, onSubmit, value}) => {
+  return (
+    <form className="form" onSubmit={onSubmit}>
+      <input type="text" value={value} onChange={onChange} placeholder="Add My Tasks :)" />
+    </form>
+  )
 }
 
 export default Form;

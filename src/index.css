@@ -1,8 +1,101 @@
-@import url('https://fonts.googleapis.com/css?family=Nanum+Myeongjo:700,800&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Russo+One|Sunflower:500&display=swap');
 
-body {
+* {
   margin: 0;
   padding: 0;
-  background: #f9f9f9;
-  font-family: 'Nanum Myeongjo', serif;
+}
+html, body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e9fac8;
+}
+
+.todo-template {
+  background: white;
+  width: 500px;
+  padding: 20px;
+  box-sizing: border-box;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.title {
+  margin-bottom: 20px;
+  font-family: 'Russo One', sans-serif;
+  font-size: 40px;
+  text-align: center;
+  color: #94d82d;
+}
+
+.form-wrapper {
+  margin-bottom: 20px;
+}
+
+.form input {
+  display: inline-block;
+  width: 100%;
+  padding: 5px 0;
+  box-sizing: border-box;
+  font-family: 'Sunflower', sans-serif;
+  font-size: 25px;
+  border: 2px dashed transparent;
+  border-bottom-color: #d8f5a2;
+  outline: none;
+  box-shadow: none;
+}
+
+.form input:focus {
+  border-bottom-style: solid;
+  border-bottom-color: #94d82d;
+}
+
+.todo-item {
+  padding: 15px 0;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.15s;
+  user-select: none;
+}
+
+.todo-item:hover {
+  background: #f4fce3;
+}
+
+.todo-item:hover .remove {
+  opacity: 1;
+}
+
+.todo-item + .todo-item {
+  border-top: 1px solid #eee;
+}
+
+.remove {
+  margin-right: 10px;
+  font-size: 15px;
+  opacity: 0;
+}
+
+.todo-text {
+  flex: 1;
+  word-break: break-all;
+  font-family: 'Sunflower', sans-serif;
+  font-size: 20px;
+}
+
+.checked {
+  text-decoration: line-through;
+  color: #adb5bd;
+}
+
+.check-mark {
+  font-size: 20px;
+  margin-left: 10px;
+  color: #40c057;
 }
